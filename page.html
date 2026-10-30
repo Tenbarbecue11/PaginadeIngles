@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before University</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #09060f;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #c084fc;
+    margin-bottom: 15px;
+}
+
+header p {
+    color: #b9adc8;
+    font-size: 1.05rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 70px;
+}
+
+.people {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: linear-gradient(145deg, #1c1229, #100b18);
+    border: 1px solid #48266b;
+    border-radius: 18px;
+    padding: 35px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #c084fc;
+    box-shadow: 0 10px 30px #8b5cf633;
+}
+
+.card .number {
+    font-size: 2.5rem;
+    color: #a855f7;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #b9adc8;
+}
+
+button {
+    background: #9333ea;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+button:hover {
+    background: #a855f7;
+    transform: scale(1.04);
+}
+
+.page {
+    display: none;
+    max-width: 950px;
+    margin: auto;
+    padding: 35px 20px 70px;
+    animation: appear .4s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+#home.active {
+    display: block;
+}
+
+.person-title {
+    color: #c084fc;
+    font-size: 2.5rem;
+    margin: 35px 0 20px;
+}
+
+.person-text {
+    background: #171020;
+    border-left: 4px solid #9333ea;
+    padding: 25px;
+    border-radius: 10px;
+    color: #ddd2e9;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #63338b;
+}
+
+.image-placeholder {
+    height: 220px;
+    border: 2px dashed #7541a0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b9adc8;
+    background: #171020;
+}
+
+.back {
+    background: #241631;
+    border: 1px solid #7541a0;
+}
+
+footer {
+    text-align: center;
+    color: #766681;
+    padding: 25px;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PÁGINA PRINCIPAL -->
+<section id="home" class="active">
+
+<header>
+    <h1>Before University</h1>
+    <p>Get to know our stories, experiences and memories before starting this stage.</p>
+</header>
+
+<div class="container">
+    <div class="people">
+
+        <div class="card" onclick="showPage(1)">
+            <div class="number">01</div>
+            <h2>Nicolas Cajamarca</h2>
+        </div>
+
+        <div class="card" onclick="showPage(2)">
+            <div class="number">02</div>
+            <h2>Mateo Beltran</h2>
+            
+        </div>
+
+        <div class="card" onclick="showPage(3)">
+            <div class="number">03</div>
+            <h2>Sara Alvarez</h2>
+        </div>
+
+        <div class="card" onclick="showPage(4)">
+            <div class="number">04</div>
+            <h2>Alexander Gonzales</h2>
+            
+        </div>
+
+        <div class="card" onclick="showPage(5)">
+            <div class="number">05</div>
+            <h2>Tomás Poveda</h2>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- PÁGINAS INDIVIDUALES -->
+
+<div id="person1" class="page">
+    <button class="back" onclick="goHome()">← Back</button>
+    <h1 class="person-title">Nicolas Cajamarca</h1>
+    <div class="person-text">
+        <h2>My story before university</h2>
+        <p>I am 20 years old, and I want to talk about my life before entering university.
+            Before I started university, I had worked as a motorcycle mechanic. I had learned many things about motorcycles, and I had gained experience repairing engines and helping customers. I had worked hard and saved some money for my future.
+            Before starting my studies, I had also traveled to Armenia, Colombia, for my vacation. During my trip, I had visited several tourist attractions and had enjoyed the beautiful landscapes. I had taken many pictures and had discovered interesting places. I had bought new clothes in different stores, and I had met many new people. I had talked to them, shared experiences, and made new friends.
+            By the time I entered university, I had already gained work experience, traveled to new places, bought clothes, and met interesting people. These experiences had helped me grow as a person and prepare for this new stage of my life.</p>
+    </div>
+    <h2>Gallery of Memories</h2>
+    <div class="gallery">
+        <img src="imagenes/Nicolas1.jpeg" alt="Imagen 1">
+        <img src="imagenes/Nicolas2.jpeg" alt="Imagen 2">
+        <img src="imagenes/Nicolas3.jpeg" alt="Imagen 3">
+    </div>
+</div>
+
+<div id="person2" class="page">
+    <button class="back" onclick="goHome()">← Back</button>
+    <h1 class="person-title">Mateo Beltran</h1>
+    <div class="person-text">
+        <h2>My story before university</h2>
+        <p>I am 20 years old, and I want to talk about my life before entering university.
+            Before I started university, I had played soccer for several years. I had participated in different tournaments and had gained a lot of experience playing as part of a team. I had also had the opportunity to almost be selected to play in the Primera C league with the La Equidad team. I had trained very hard and had learned the importance of discipline, effort, and teamwork.
+            Before starting my studies, I had also taken several Excel courses, where I had learned to use different tools and functions to improve my computer skills. In addition, I had worked in a supermarket, where I had gained experience helping customers, organizing products, and working as part of a team. This job had taught me to be more responsible and to value hard work.
+            By the time I entered university, I had already participated in soccer tournaments, had come close to achieving my dream of playing professional soccer, had completed Excel courses, and had gained work experience in a supermarket. All these experiences had helped me grow as a person, develop new skills, and prepare for this new stage of my life.</p>
+    </div>
+    <h2>Gallery of Memories</h2>
+    <div class="gallery">
+        <img src="imagenes/Mateo1.jpeg" alt="Imagen 1">
+        <img src="imagenes/Mateo2.jpeg" alt="Imagen 2">
+        <img src="imagenes/Mateo3.jpeg" alt="Imagen 3">
+    </div>
+</div>
+
+<div id="person3" class="page">
+    <button class="back" onclick="goHome()">← Back</button>
+    <h1 class="person-title">Sara Alvarez</h1>
+    <div class="person-text">
+        <h2>My story before university</h2>
+        <p>By the time I turned 18, I had experienced more than many people my age. I had traveled to Armenia, a warm and welcoming city, and I had fallen in love with its calm rhythm. Before that year ended, I had made one of the biggest decisions of my life: I had bought my own apartment there. I had carefully saved money, and I had visited several properties before choosing the right one. After that, I had moved in and started a new chapter in my life. I had never lived alone before, but I had quickly learned to manage my time, expenses, and responsibilities. My family had supported me throughout the entire process, and they had visited me often. We had shared countless meals, long conversations, and happy celebrations in my new home.
+            During that period, I had also found a job at Adidas. I had worked hard to learn about the products and procedures, and my coworkers had taught me a lot about teamwork. Although I had felt nervous on my first day, I had soon become confident and motivated. By the end of that year, I had gained independence, work experience, and a deeper appreciation for my family.
+        </p>
+        <p>By the time I turned 19, I had already started a new and exciting challenge. I had begun preparing applications for admission opportunities at Universidad de Cundinamarca in Chía, an opportunity that had seemed impossible only a few years earlier. I had carefully read every requirement and had gathered all the necessary documents. I had started the process in person, which had allowed me to meet people, ask questions, and understand how everything worked.    My family had listened to my plans with surprise and pride, and they had encouraged me whenever I had doubted myself. My friends had also helped me practice English, and I had gradually improved my speaking skills. By then, I had learned how important discipline, patience, and organization were. I had made mistakes, corrected them, and continued moving forward. I had left my comfort zone, met people from different cultures, and begun to see the world from a broader perspective.
+            When I thought about everything that had happened since I was 18, I had realized how much I had changed. I had gone from buying an apartment and working in a store to pursuing international opportunities.
+        </p>
+    </div>
+    <h2>Gallery of Memories</h2>
+    <div class="gallery">
+        <img src="imagenes/Sara1.jpeg" alt="Imagen 1">
+        <img src="imagenes/Sara2.jpeg" alt="Imagen 2">
+        <img src="imagenes/Sara3.jpeg" alt="Imagen 3">
+    </div>
+</div>
+
+<div id="person4" class="page">
+    <button class="back" onclick="goHome()">← Back</button>
+    <h1 class="person-title">Alexander Gonzales</h1>
+    <div class="person-text">
+        <h2>My story before university</h2>
+        <p>Before I entered university, I had already studied to become a computer maintenance technician, and I had learned how to assemble and repair computers. I had also worked at a supermarket for some time, and I had become a father, which had taught me to be responsible from a young age.
+        </p>
+    <p>Getting into university hadn't been easy for me. I had applied three times before I was finally accepted. Each time I hadn't been accepted, I had kept trying, and by the time I got in, I had understood that persistence was the key to achieving my goals.
+    </p>
+    </div>
+    <h2>Gallery of Memories</h2>
+    <div class="gallery">
+        <img src="imagenes/Alex1.jpeg" alt="Imagen 1">
+        <img src="imagenes/Alex2.jpeg" alt="Imagen 2">
+        <img src="imagenes/Alex3.jpeg" alt="Imagen 3">
+    </div>
+</div>
+
+<div id="person5" class="page">
+    <button class="back" onclick="goHome()">← Back</button>
+    <h1 class="person-title">Tomás Poveda</h1>
+    <div class="person-text">
+        <h2>My story before university</h2>
+        <p>Before entering university, I had developed a strong interest in technology, video games, and computers. I had always enjoyed understanding how things worked, exploring new tools, and learning about different subjects. I had also spent part of my free time playing video games and trading card games, which had helped me develop strategic thinking, analytical skills, and logical reasoning.</p>
+        <p>Besides my technological interests, I had gained knowledge of bartending and barista skills, where I had learned about preparing drinks, handling different ingredients, and serving customers. These experiences had allowed me to develop practical skills, creativity, and communication skills.</p>
+        <p>On the other hand, I had been a member of the Cajicá Symphonic Band, where I had had the opportunity to play the trombone. Through music, I had learned the importance of discipline, consistency, and teamwork. I had also shared experiences with other musicians and had participated in an environment where coordination and commitment had been essential.</p>
+        <p>All these experiences had helped me develop different skills and discover new interests. By the time I entered Systems Engineering and Computer Science, I had already developed a curious and creative personality, along with a strong desire to learn. Each of these experiences had contributed to shaping the person I am today and had prepared me to begin a new stage full of challenges and opportunities.</p>
+    </div>
+    <h2>Gallery of Memories</h2>
+    <div class="gallery">
+        <img src="imagenes/Tomas1.jpeg" alt="Imagen 1">
+        <img src="imagenes/Tomas2.jpeg" alt="Imagen 2">
+        <img src="imagenes/Tomas3.jpeg" alt="Imagen 3">
+    </div>
+</div>
+
+
+<script>
+function showPage(number) {
+    document.getElementById("home").classList.remove("active");
+
+    for (let i = 1; i <= 5; i++) {
+        document.getElementById("person" + i).classList.remove("active");
+    }
+
+    document.getElementById("person" + number).classList.add("active");
+    window.scrollTo(0, 0);
+}
+
+function goHome() {
+    for (let i = 1; i <= 5; i++) {
+        document.getElementById("person" + i).classList.remove("active");
+    }
+
+    document.getElementById("home").classList.add("active");
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
